@@ -26,12 +26,28 @@ header {
     background-color: $background;
     h1 {
         font-size: 30px;
+        i {
+            font-size: 1.3rem;
+        }
     }
     .menu {
         display: flex;
         gap: 20px;
+        display: none;
+        @media (min-width:769px){
+            display: flex;
+        }
         a {
             font-weight: 600;
+        }
+    }
+    .menu_hb {
+        display: none;
+        i {
+            font-size: 30px;
+        }
+        @media (max-width:768px){
+            display: block;
         }
     }
 }
@@ -39,30 +55,68 @@ header {
 main {
     .navigation {
         position: fixed;
-        right: 2vw;
-        bottom: 25vh;
+        right: 20px;
+        bottom: 60px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (min-width:768px){
+            right: 60px;
+        }
         a {
             display: flex;
             gap: 10px;
+            justify-content: flex-end;
         }
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             background-color: black;
-            transition: all 0.3s ease-out;
+            transition: all 80ms ease-out;
             border: 3px solid black;
             transform: rotate(45deg);
+            color: transparent;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 3px;
             &:hover {
-                transform: rotate(90deg);
-                background-color: transparent;
+                width: 25px;
+                height: 40px;
+                transform: rotate(0deg);
+                width: 60px;
+                color: white;
+            }
+        }
+        .dotF {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            transition: all 80ms ease-out;
+            border: 3px solid black;
+            text-align: center;
+            color: transparent;
+            transform: rotate(45deg);
+            font-weight: bolder;
+            position: relative;
+            right: -8px;
+            border-radius: 3px;
+            &:hover {
+                transform: rotate(0deg);
+                width: 60px;
+                color: white;
             }
         }
     }
     .hero {
-        background-color: red;
+        @media (min-width:768px){
+            display: flex;
+            height: 80vh;
+        }
         .block1 {
             @include container;
             background-color:$primary_color;
@@ -71,17 +125,51 @@ main {
             .description {
                 @include content(transparent);
                 h2 {
-                    @include subtitle($text_color2);
+                    @include subtitle($background2);
                 }
+                h3 {
+                    @include paragraph($text_color2);
+                }
+            }
+            .sub_p {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                p {
+                    color: $background2;
+                    font-weight: bolder;
+                    font-size: 15px;
+                    @media (min-width:768px){
+                        font-size: 20px;
+                    }
+                }
+            }
+            @media (min-width:768px){
+                height: 100%;
+                width: 65%;
+                flex-wrap: nowrap;
             }
         }
         .block2 {
-            @include container;
             background-color: $secondary_color;
-            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (min-width:768px){
+                height: 100%;
+                width: 35%;
+            }
             img {
-                width: 200px;
-                padding: 30px;
+                width: 280px;
+                padding: 60px;
+                transition: all 0.4s;
+                @media (min-width:768px){
+                    width: 350px;
+                }
             }
         }
     }
@@ -106,6 +194,9 @@ main {
         }
         img {
             width: 70%;
+            @media (min-width:550px){
+                width: 450px;
+            }
         }
 
     }
@@ -152,6 +243,4 @@ footer {
     }
 }
 
-@media (min-width:768px) {
-    
-}
+

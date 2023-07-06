@@ -10,10 +10,24 @@
 }
 
 @mixin subtitle($color) {
-    font-size:40px;
+    font-size:45px;
     font-weight: bold;
     color: $color;
     text-align: center;
+    transition: all 0.4s;
+    @media (min-width:768px){
+        font-size: 65px;
+    }
+}
+
+@mixin paragraph ($pcolor) {
+    color: $pcolor;
+    font-size:20px;
+    text-align:center;
+    transition: all 0.4s;
+    @media (min-width:768px){
+        font-size: 30px;
+    }
 }
 
 @mixin content($color) { 
@@ -22,6 +36,9 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 80%;
+    width: 75%;
     background-color: $color;
+    @media (min-width:550px){
+        width: 450px;
+    }
 }

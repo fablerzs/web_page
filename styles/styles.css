@@ -24,40 +24,100 @@ header {
 header h1 {
   font-size: 30px;
 }
+header h1 i {
+  font-size: 1.3rem;
+}
 header .menu {
   display: flex;
   gap: 20px;
+  display: none;
+}
+@media (min-width: 769px) {
+  header .menu {
+    display: flex;
+  }
 }
 header .menu a {
   font-weight: 600;
 }
+header .menu_hb {
+  display: none;
+}
+header .menu_hb i {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  header .menu_hb {
+    display: block;
+  }
+}
 
 main .navigation {
   position: fixed;
-  right: 2vw;
-  bottom: 25vh;
+  right: 20px;
+  bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+@media (min-width: 768px) {
+  main .navigation {
+    right: 60px;
+  }
+}
 main .navigation a {
   display: flex;
   gap: 10px;
+  justify-content: flex-end;
 }
 main .navigation .dot {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: black;
-  transition: all 0.3s ease-out;
+  transition: all 80ms ease-out;
   border: 3px solid black;
   transform: rotate(45deg);
+  color: transparent;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
 }
 main .navigation .dot:hover {
-  transform: rotate(90deg);
-  background-color: transparent;
+  width: 25px;
+  height: 40px;
+  transform: rotate(0deg);
+  width: 60px;
+  color: white;
 }
-main .hero {
-  background-color: red;
+main .navigation .dotF {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  transition: all 80ms ease-out;
+  border: 3px solid black;
+  text-align: center;
+  color: transparent;
+  transform: rotate(45deg);
+  font-weight: bolder;
+  position: relative;
+  right: -8px;
+  border-radius: 3px;
+}
+main .navigation .dotF:hover {
+  transform: rotate(0deg);
+  width: 60px;
+  color: white;
+}
+@media (min-width: 768px) {
+  main .hero {
+    display: flex;
+    height: 80vh;
+  }
 }
 main .hero .block1 {
   display: flex;
@@ -78,30 +138,84 @@ main .hero .block1 .description {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: transparent;
 }
-main .hero .block1 .description h2 {
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
+@media (min-width: 550px) {
+  main .hero .block1 .description {
+    width: 450px;
+  }
 }
-main .hero .block2 {
+main .hero .block1 .description h2 {
+  font-size: 45px;
+  font-weight: bold;
+  color: #55394c;
+  text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main .hero .block1 .description h2 {
+    font-size: 65px;
+  }
+}
+main .hero .block1 .description h3 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main .hero .block1 .description h3 {
+    font-size: 30px;
+  }
+}
+main .hero .block1 .sub_p {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+main .hero .block1 .sub_p p {
+  color: #55394c;
+  font-weight: bolder;
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  main .hero .block1 .sub_p p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  main .hero .block1 {
+    height: 100%;
+    width: 65%;
+    flex-wrap: nowrap;
+  }
+}
+main .hero .block2 {
+  background-color: #71839e;
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  background-color: #55394c;
-  height: 100vh;
-  gap: 50px;
-  background-color: #71839e;
-  height: 40%;
+}
+@media (min-width: 768px) {
+  main .hero .block2 {
+    height: 100%;
+    width: 35%;
+  }
 }
 main .hero .block2 img {
-  width: 200px;
-  padding: 30px;
+  width: 280px;
+  padding: 60px;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main .hero .block2 img {
+    width: 350px;
+  }
 }
 main #page-2 {
   display: flex;
@@ -120,14 +234,25 @@ main #page-2 div {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: #55394c;
 }
+@media (min-width: 550px) {
+  main #page-2 div {
+    width: 450px;
+  }
+}
 main #page-2 div h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: white;
   text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main #page-2 div h2 {
+    font-size: 65px;
+  }
 }
 main #page-3 {
   display: flex;
@@ -146,17 +271,33 @@ main #page-3 div {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: #cbc0cb;
 }
+@media (min-width: 550px) {
+  main #page-3 div {
+    width: 450px;
+  }
+}
 main #page-3 div h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: black;
   text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main #page-3 div h2 {
+    font-size: 65px;
+  }
 }
 main #page-3 img {
   width: 70%;
+}
+@media (min-width: 550px) {
+  main #page-3 img {
+    width: 450px;
+  }
 }
 main #page-4 {
   display: flex;
@@ -175,16 +316,27 @@ main #page-4 div {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: #55394c;
   align-items: start;
 }
+@media (min-width: 550px) {
+  main #page-4 div {
+    width: 450px;
+  }
+}
 main #page-4 div h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: white;
   text-align: center;
+  transition: all 0.4s;
   text-align: left;
+}
+@media (min-width: 768px) {
+  main #page-4 div h2 {
+    font-size: 65px;
+  }
 }
 main #page-5 {
   display: flex;
@@ -202,14 +354,25 @@ main #page-5 .contact {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: #b57582;
 }
+@media (min-width: 550px) {
+  main #page-5 .contact {
+    width: 450px;
+  }
+}
 main #page-5 .contact h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: white;
   text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  main #page-5 .contact h2 {
+    font-size: 65px;
+  }
 }
 
 footer {
@@ -224,10 +387,16 @@ footer {
   background-color: white;
 }
 footer h2 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: black;
   text-align: center;
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  footer h2 {
+    font-size: 65px;
+  }
 }
 footer .link_area {
   padding: 30px;
@@ -235,9 +404,14 @@ footer .link_area {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 80%;
+  width: 75%;
   background-color: #55394c;
   gap: 30px;
+}
+@media (min-width: 550px) {
+  footer .link_area {
+    width: 450px;
+  }
 }
 footer .rights {
   background-color: black;
