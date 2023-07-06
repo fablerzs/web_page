@@ -1,0 +1,157 @@
+@import "../var/var";
+@import "../mixin/mixin";
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@100;300;400;500;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text_color;
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+}
+
+
+header {
+    position: fixed;
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: $background;
+    h1 {
+        font-size: 30px;
+    }
+    .menu {
+        display: flex;
+        gap: 20px;
+        a {
+            font-weight: 600;
+        }
+    }
+}
+
+main {
+    .navigation {
+        position: fixed;
+        right: 2vw;
+        bottom: 25vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        a {
+            display: flex;
+            gap: 10px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            transition: all 0.3s ease-out;
+            border: 3px solid black;
+            transform: rotate(45deg);
+            &:hover {
+                transform: rotate(90deg);
+                background-color: transparent;
+            }
+        }
+    }
+    .hero {
+        background-color: red;
+        .block1 {
+            @include container;
+            background-color:$primary_color;
+            height: 60%;
+            padding: 100px 0;
+            .description {
+                @include content(transparent);
+                h2 {
+                    @include subtitle($text_color2);
+                }
+            }
+        }
+        .block2 {
+            @include container;
+            background-color: $secondary_color;
+            height: 40%;
+            img {
+                width: 200px;
+                padding: 30px;
+            }
+        }
+    }
+    #page-2 {
+        @include container;
+        background-color: $background;
+        div {
+            @include content($background2);
+             h2 {
+                @include subtitle($text_color2);
+              }
+           }
+    }
+    #page-3 {
+        @include container;
+        background-color: $background2;
+        div {
+            @include content($background);
+            h2 {
+                @include subtitle($text_color);
+            }
+        }
+        img {
+            width: 70%;
+        }
+
+    }
+    #page-4 {
+        @include container;
+        background-color: $background;
+        div {
+            @include content($background2);
+            align-items: start;
+            h2 {
+                @include subtitle($text_color2);
+                text-align: left;
+            }
+        }
+    }
+    #page-5 {
+        @include container;
+        .contact {
+            @include content($primary_color);
+            h2 {
+                @include subtitle($text_color2);
+            }
+        }
+    }
+}
+
+footer {
+    @include container;
+    background-color: white;
+    h2 {
+        @include subtitle($text_color);
+    }
+    .link_area {
+        @include content($background2);
+        gap: 30px;
+    }
+    .rights {
+        background-color: black;
+        color: white;
+        width: 100vw;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+    }
+}
+
+@media (min-width:768px) {
+    
+}

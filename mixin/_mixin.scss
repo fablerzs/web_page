@@ -1,0 +1,27 @@
+@mixin container() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $background2;
+    height: 100vh;
+    gap: 50px;
+}
+
+@mixin subtitle($color) {
+    font-size:40px;
+    font-weight: bold;
+    color: $color;
+    text-align: center;
+}
+
+@mixin content($color) { 
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    background-color: $color;
+}
