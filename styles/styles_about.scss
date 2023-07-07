@@ -22,10 +22,3 @@ footer {
     @include footer();
     height: 60vh;
 }
-
-.navigation {
-    @include navigation_dots();
-    .dotF {
-        @include dot_nav(13px,13px);
-    }
-}

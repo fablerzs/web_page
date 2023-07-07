@@ -22,32 +22,7 @@ header {
 
 main {
     .navigation {
-        position: fixed;
-        right: 15px;
-        bottom: 60px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        animation-name: show_nav;
-        animation-duration: 500ms;
-        animation-direction: alternate;
-        animation-iteration-count: 2;
-        @media (min-width:768px){
-            right: 50px;
-        }
-        a {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-        }
-        .dot {
-            @include dot_nav(10px,10px);
-        }
-        .dotF {
-            @include dot_nav(13px,13px);
-            position:relative; 
-            right:-2px;
-        }
+        @include navigation_dots();
     }
     #page-1 {
         @media (min-width:768px){
@@ -137,7 +112,7 @@ main {
         div {
             @include content(transparent);
             @media (min-width:770px){
-                width: 100%;
+                width: 85%;
             }
              h2 {
                 @include subtitle($background2);
@@ -146,12 +121,10 @@ main {
                 @include paragraph($text_color);
               }
         }
-
     }
     #page-3 {
         @include container;
         background-color: $primary_color;
-        
         div {
             @include content(transparent);
             h2 {
