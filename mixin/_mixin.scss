@@ -7,26 +7,27 @@
     background-color: $background2;
     height: 100vh;
     gap: 50px;
+    @media (min-width:770px){
+        flex-direction: row;
+    }
 }
 
 @mixin subtitle($color) {
     font-size:45px;
     font-weight: bold;
     color: $color;
-    text-align: center;
     transition: all 0.4s;
-    @media (min-width:768px){
+    @media (min-width:770px){
         font-size: 65px;
     }
 }
 
 @mixin paragraph ($pcolor) {
     color: $pcolor;
-    font-size:20px;
-    text-align:center;
+    font-size:18px;
     transition: all 0.4s;
-    @media (min-width:768px){
-        font-size: 30px;
+    @media (min-width:770px){
+        font-size: 22px;
     }
 }
 
@@ -34,11 +35,67 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     gap: 10px;
     width: 75%;
     background-color: $color;
     @media (min-width:550px){
-        width: 450px;
+        width: 40%;
+    }
+}
+
+@mixin button_style() {
+    background-color:white;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    border: 2px solid $primary_color;
+    color: $primary_color;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    i {
+        color: $primary_color;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+    }
+    &::before {
+        content: " ";
+        color: transparent;
+        width: 0px;
+        height: 50px;
+        background-color: $primary_color;
+        position: absolute;
+        left: 0px;
+        transition: all 400ms;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        
+    }
+    &:hover::before {
+        width: 198px;
+        color: white;
+    }
+}
+
+@mixin form_style(){
+    border:none;
+    border-radius: 3px;
+    height: 100%;
+    padding: 7px;
+    @media (min-width:770px){
+        padding: 20px;
     }
 }

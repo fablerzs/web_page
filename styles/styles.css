@@ -19,7 +19,12 @@ header {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: #cbc0cb;
+  background-color: rgba(203, 192, 203, 0.8);
+}
+@media (min-width: 770px) {
+  header {
+    background-color: rgba(203, 192, 203, 0.8);
+  }
 }
 header h1 {
   font-size: 30px;
@@ -62,7 +67,7 @@ main .navigation {
 }
 @media (min-width: 768px) {
   main .navigation {
-    right: 60px;
+    right: 50px;
   }
 }
 main .navigation a {
@@ -114,12 +119,12 @@ main .navigation .dotF:hover {
   color: white;
 }
 @media (min-width: 768px) {
-  main .hero {
+  main #page-1 {
     display: flex;
     height: 80vh;
   }
 }
-main .hero .block1 {
+main #page-1 .block1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,44 +137,48 @@ main .hero .block1 {
   height: 60%;
   padding: 100px 0;
 }
-main .hero .block1 .description {
+@media (min-width: 770px) {
+  main #page-1 .block1 {
+    flex-direction: row;
+  }
+}
+main #page-1 .block1 .description {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
   background-color: transparent;
 }
 @media (min-width: 550px) {
-  main .hero .block1 .description {
-    width: 450px;
+  main #page-1 .block1 .description {
+    width: 40%;
   }
 }
-main .hero .block1 .description h2 {
+main #page-1 .block1 .description h2 {
   font-size: 45px;
   font-weight: bold;
   color: #55394c;
-  text-align: center;
   transition: all 0.4s;
 }
-@media (min-width: 768px) {
-  main .hero .block1 .description h2 {
+@media (min-width: 770px) {
+  main #page-1 .block1 .description h2 {
     font-size: 65px;
   }
 }
-main .hero .block1 .description h3 {
+main #page-1 .block1 .description h3 {
   color: white;
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
   transition: all 0.4s;
 }
-@media (min-width: 768px) {
-  main .hero .block1 .description h3 {
-    font-size: 30px;
+@media (min-width: 770px) {
+  main #page-1 .block1 .description h3 {
+    font-size: 22px;
   }
 }
-main .hero .block1 .sub_p {
+main #page-1 .block1 .sub_p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -178,42 +187,42 @@ main .hero .block1 .sub_p {
   gap: 20px;
   padding: 20px;
 }
-main .hero .block1 .sub_p p {
+main #page-1 .block1 .sub_p p {
   color: #55394c;
   font-weight: bolder;
   font-size: 15px;
 }
 @media (min-width: 768px) {
-  main .hero .block1 .sub_p p {
+  main #page-1 .block1 .sub_p p {
     font-size: 20px;
   }
 }
 @media (min-width: 768px) {
-  main .hero .block1 {
+  main #page-1 .block1 {
     height: 100%;
     width: 65%;
     flex-wrap: nowrap;
   }
 }
-main .hero .block2 {
+main #page-1 .block2 {
   background-color: #71839e;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 768px) {
-  main .hero .block2 {
+  main #page-1 .block2 {
     height: 100%;
     width: 35%;
   }
 }
-main .hero .block2 img {
+main #page-1 .block2 img {
   width: 280px;
   padding: 60px;
   transition: all 0.4s;
 }
 @media (min-width: 768px) {
-  main .hero .block2 img {
+  main #page-1 .block2 img {
     width: 350px;
   }
 }
@@ -226,32 +235,71 @@ main #page-2 {
   background-color: #55394c;
   height: 100vh;
   gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 50px;
+  justify-items: center;
   background-color: #cbc0cb;
+}
+@media (min-width: 770px) {
+  main #page-2 {
+    flex-direction: row;
+  }
+}
+@media (min-width: 770px) {
+  main #page-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  main #page-2 div:first-child {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main #page-2 div:last-child {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 main #page-2 div {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
-  background-color: #55394c;
+  background-color: transparent;
 }
 @media (min-width: 550px) {
   main #page-2 div {
-    width: 450px;
+    width: 40%;
+  }
+}
+@media (min-width: 770px) {
+  main #page-2 div {
+    width: 100%;
   }
 }
 main #page-2 div h2 {
   font-size: 45px;
   font-weight: bold;
-  color: white;
-  text-align: center;
+  color: #55394c;
   transition: all 0.4s;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   main #page-2 div h2 {
     font-size: 65px;
+  }
+}
+main #page-2 div p {
+  color: black;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  main #page-2 div p {
+    font-size: 22px;
   }
 }
 main #page-3 {
@@ -263,40 +311,59 @@ main #page-3 {
   background-color: #55394c;
   height: 100vh;
   gap: 50px;
-  background-color: #55394c;
+  background-color: #b57582;
+}
+@media (min-width: 770px) {
+  main #page-3 {
+    flex-direction: row;
+  }
 }
 main #page-3 div {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
-  background-color: #cbc0cb;
+  background-color: transparent;
 }
 @media (min-width: 550px) {
   main #page-3 div {
-    width: 450px;
+    width: 40%;
   }
 }
 main #page-3 div h2 {
   font-size: 45px;
   font-weight: bold;
   color: black;
-  text-align: center;
   transition: all 0.4s;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   main #page-3 div h2 {
     font-size: 65px;
   }
 }
+main #page-3 div p {
+  color: black;
+  font-size: 18px;
+  transition: all 0.4s;
+  font-size: 15px;
+}
+@media (min-width: 770px) {
+  main #page-3 div p {
+    font-size: 22px;
+  }
+}
 main #page-3 img {
   width: 70%;
+  margin-bottom: 40px;
+  border-radius: 2px;
 }
 @media (min-width: 550px) {
   main #page-3 img {
-    width: 450px;
+    width: 600px;
+    margin: 0;
   }
 }
 main #page-4 {
@@ -308,34 +375,107 @@ main #page-4 {
   background-color: #55394c;
   height: 100vh;
   gap: 50px;
+  gap: 0px;
   background-color: #cbc0cb;
+}
+@media (min-width: 770px) {
+  main #page-4 {
+    flex-direction: row;
+  }
 }
 main #page-4 div {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
   background-color: #55394c;
-  align-items: start;
+  height: 38%;
+  gap: 2rem;
 }
 @media (min-width: 550px) {
   main #page-4 div {
-    width: 450px;
+    width: 40%;
   }
+}
+main #page-4 div:not(:last-of-type) {
+  border-bottom: 1px solid #b57582;
 }
 main #page-4 div h2 {
   font-size: 45px;
   font-weight: bold;
   color: white;
-  text-align: center;
   transition: all 0.4s;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   main #page-4 div h2 {
     font-size: 65px;
+  }
+}
+main #page-4 div p {
+  color: white;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  main #page-4 div p {
+    font-size: 22px;
+  }
+}
+main #page-4 div button {
+  z-index: 0;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border: 2px solid #b57582;
+  color: #b57582;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main #page-4 div button i {
+  color: #b57582;
+}
+main #page-4 div button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+main #page-4 div button::before {
+  content: " ";
+  color: transparent;
+  width: 0px;
+  height: 50px;
+  background-color: #b57582;
+  position: absolute;
+  left: 0px;
+  transition: all 400ms;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+main #page-4 div button:hover::before {
+  width: 198px;
+  color: white;
+}
+@media (min-width: 770px) {
+  main #page-4 div {
+    height: 70%;
+    gap: 3rem;
+    padding: 0 80px;
+  }
+  main #page-4 div:not(:last-of-type) {
+    border-right: 1px solid #b57582;
   }
 }
 main #page-5 {
@@ -348,30 +488,262 @@ main #page-5 {
   height: 100vh;
   gap: 50px;
 }
+@media (min-width: 770px) {
+  main #page-5 {
+    flex-direction: row;
+  }
+}
 main #page-5 .contact {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
-  background-color: #b57582;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 550px) {
   main #page-5 .contact {
-    width: 450px;
+    width: 40%;
   }
 }
 main #page-5 .contact h2 {
   font-size: 45px;
   font-weight: bold;
   color: white;
-  text-align: center;
   transition: all 0.4s;
 }
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   main #page-5 .contact h2 {
     font-size: 65px;
+  }
+}
+main #page-5 .contact p {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+main #page-5 .contact form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60px 60px 120px 60px;
+  grid-gap: 15px;
+  justify-items: center;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px 160px 0px 80px;
+    gap: 30px;
+  }
+}
+main #page-5 .contact form .name_form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 100%;
+}
+main #page-5 .contact form .name_form label {
+  color: white;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .name_form label {
+    font-size: 22px;
+  }
+}
+main #page-5 .contact form .name_form input {
+  border: none;
+  border-radius: 3px;
+  height: 100%;
+  padding: 7px;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .name_form input {
+    padding: 20px;
+  }
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .name_form {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+main #page-5 .contact form .email_form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: 100%;
+}
+main #page-5 .contact form .email_form label {
+  color: white;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .email_form label {
+    font-size: 22px;
+  }
+}
+main #page-5 .contact form .email_form input {
+  border: none;
+  border-radius: 3px;
+  height: 100%;
+  padding: 7px;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .email_form input {
+    padding: 20px;
+  }
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .email_form {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+main #page-5 .contact form .textarea_form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  width: 100%;
+  margin-bottom: 30px;
+}
+main #page-5 .contact form .textarea_form label {
+  color: white;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .textarea_form label {
+    font-size: 22px;
+  }
+}
+main #page-5 .contact form .textarea_form textarea {
+  border: none;
+  border-radius: 3px;
+  height: 100%;
+  padding: 7px;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .textarea_form textarea {
+    padding: 20px;
+  }
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .textarea_form {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+}
+main #page-5 .contact form .send {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border: 2px solid #b57582;
+  color: #b57582;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+main #page-5 .contact form .send i {
+  color: #b57582;
+}
+main #page-5 .contact form .send:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+main #page-5 .contact form .send::before {
+  content: " ";
+  color: transparent;
+  width: 0px;
+  height: 50px;
+  background-color: #b57582;
+  position: absolute;
+  left: 0px;
+  transition: all 400ms;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+main #page-5 .contact form .send:hover::before {
+  width: 198px;
+  color: white;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .send {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+main #page-5 .contact form .reset {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border: 2px solid #b57582;
+  color: #b57582;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+main #page-5 .contact form .reset i {
+  color: #b57582;
+}
+main #page-5 .contact form .reset:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+main #page-5 .contact form .reset::before {
+  content: " ";
+  color: transparent;
+  width: 0px;
+  height: 50px;
+  background-color: #b57582;
+  position: absolute;
+  left: 0px;
+  transition: all 400ms;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+main #page-5 .contact form .reset:hover::before {
+  width: 198px;
+  color: white;
+}
+@media (min-width: 770px) {
+  main #page-5 .contact form .reset {
+    grid-column: 2/3;
+    grid-row: 3/4;
   }
 }
 
@@ -384,40 +756,72 @@ footer {
   background-color: #55394c;
   height: 100vh;
   gap: 50px;
-  background-color: white;
+  background-color: #71839e;
 }
-footer h2 {
-  font-size: 45px;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  transition: all 0.4s;
-}
-@media (min-width: 768px) {
-  footer h2 {
-    font-size: 65px;
+@media (min-width: 770px) {
+  footer {
+    flex-direction: row;
   }
 }
 footer .link_area {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   width: 75%;
-  background-color: #55394c;
-  gap: 30px;
+  background-color: transparent;
+  align-items: center;
+  border-bottom: 2px solid #55394c;
+  gap: 60px;
 }
 @media (min-width: 550px) {
   footer .link_area {
-    width: 450px;
+    width: 40%;
+  }
+}
+footer .link_area h2 {
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+  transition: all 0.4s;
+}
+@media (min-width: 770px) {
+  footer .link_area h2 {
+    font-size: 65px;
+  }
+}
+footer .link_area .message_me, footer .link_area .my_links ul {
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 770px) {
+  footer .link_area {
+    width: 90%;
   }
 }
 footer .rights {
-  background-color: black;
-  color: white;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+footer .rights h5 {
+  color: black;
   text-align: center;
-  position: fixed;
-  bottom: 0px;
+  position: relative;
+  top: -2vh;
+}
+@media (min-width: 770px) {
+  footer .rights {
+    flex-direction: row;
+  }
+}
+@media (min-width: 770px) {
+  footer {
+    flex-direction: column;
+    gap: 40px;
+  }
 }/*# sourceMappingURL=styles.css.map */

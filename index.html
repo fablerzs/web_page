@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>mau<i class='bx bxs-cat'></i></h1>
+        <a href="#page-1"><h1>mau<i class='bx bxs-cat'></i></h1></a>
         <ul class="menu">
             <li>
                 <a href="https://fablerzs.github.io/Resume/" target="_blank">Mi Resumen</a>
@@ -35,7 +35,7 @@
             <li><a href="#page-6"><div class="dot">abajo</div></a></li>
             <li><a href="https://wa.me/528117512835" target="_blank"><div class="dotF">¡CLIC!</div></a></li>
         </ul>
-        <section class="hero" id="page-1">
+        <section id="page-1">
             <div class="block1">
                 <div class="description">
                     <h2>Frontend developer jr.</h2>
@@ -54,12 +54,12 @@
         <section id="page-2">
             
                 <div>
-                    <h2>Experto en tecnologia</h2>
-                    <p>Desarrollo de paginas web y cambio de roms</p>
+                    <h2>Maquetado</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta esse omnis itaque deserunt quibusdam dignissimos pariatur provident aliquam laudantium reiciendis qui harum iusto suscipit et inventore, sit id deleniti enim!</p>
                 </div>
                 <div>
-                    <h2>Experto en tecnologia</h2>
-                    <p>Desarrollo de paginas web y cambio de roms</p>
+                    <h2>Ordenado</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum deserunt aliquam autem ad quidem maxime corrupti? Cupiditate reprehenderit vero aspernatur, quia unde ullam voluptas? Aliquam delectus libero reiciendis animi?</p>
                 </div>
             
         </section>
@@ -69,6 +69,7 @@
                 <h2>que será</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos ipsum sit qui, optio quae nam et voluptate recusandae ea assumenda rem libero est rerum nihil esse maxime alias sed?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam voluptatem quas sequi ipsa repellendus earum, iure iste blanditiis eveniet perspiciatis! Nam iste animi voluptatibus porro doloribus repudiandae alias sunt perspiciatis.
                 </p>
             </div>
             <img src="img/background.jpg" alt="mountain">
@@ -78,34 +79,44 @@
             <div>
                 <h2>Me gusta la informatica</h2>
                 <p>Puedes ver algo relacionado a mi trabajo en el siguiente enlace</p>
-                <button>MY WORK</button>
+                <a href="#page-1"><button>My work &#x279C;</button></a>
+
             </div>
             <div>
                 <h2>Me gusta la naturaleza</h2>
                 <p>Puedes ver algo acerca de mi vision del mundo en el siguiente enlace</p>
-                <button>My world</button>
+                <a href="#page-1"><button>My world &#x279C;</button></a>
             </div>
         </section>
 
         <section id="page-5">
             <div class="contact">
                 <h2>Enviame un mensaje</h2>
-                 <p>Tienes alguna propuesta o solo quieres saluda? Adelante</p>   
+                 <p>Tienes alguna propuesta o solo quieres saludar? Adelante</p>   
                  <form action="ASD" method="POST">
-                    <label for="name">Tu nombre</label>
+                    <div class="name_form">
+                        <label for="name">Tu nombre:</label>
                         <input type="text" name="name" id="name" placeholder="Tu nombre va aquí">
-                    <label for="email">Direccion de email</label>
+                    </div>
+                    <div class="email_form">
+                        <label for="email">Direccion de email:</label>
                         <input type="email" name="email" id="email" placeholder="Aquí tu email">
-                    <label for="">Tu mensaje</label>
-                    <textarea name="message" id="message" cols="25" rows="5" placeholder="¡Hola!"></textarea>
+                    </div>
+                    <div class="textarea_form">
+                        <label for="">Tu mensaje:</label>
+                        <textarea name="message" id="message" cols="25" rows="5" placeholder="¡Escribe algo!"></textarea>
+                    </div>
+                        <button class="send" type="send" value="send">Enviar&#x279C;</button>
+                        <button class="reset" type="reset" value="reset">Reset&#10005;</button>
+                    
                  </form>
             </div>
         </section>
     </main>
 
     <footer id="page-6">
-        <h2>Soy hello</h2>
         <div class="link_area">
+            <h2>Dí Hola</h2>
             <div class="message_me">
                 <a href="https://t.me/fablerzs" target="_blank">Telegram</a>
                 <a href="https://wa.me/528117512835" target="_blank">Whatsapp</a>
@@ -119,7 +130,7 @@
             </div>
         </div>
         <div class="rights">
-            FabianMauricioLopezRamos
+            <h5>&copy;FabianMauricioLopezRamos</h5><h5>Frontend Developer jr</h5>
         </div>
     </footer>
 </body>
