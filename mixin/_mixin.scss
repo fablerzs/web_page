@@ -6,14 +6,13 @@
     flex-wrap: wrap;
     background-color: $background2;
     height: 100vh;
-    gap: 50px;
     @media (min-width:770px){
         flex-direction: row;
     }
 }
 
 @mixin subtitle($color) {
-    font-size:45px;
+    font-size:35px;
     font-weight: bold;
     color: $color;
     transition: all 0.4s;
@@ -24,7 +23,7 @@
 
 @mixin paragraph ($pcolor) {
     color: $pcolor;
-    font-size:18px;
+    font-size:15px;
     transition: all 0.4s;
     @media (min-width:770px){
         font-size: 22px;
@@ -38,7 +37,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
-    width: 75%;
+    width: 85%;
     background-color: $color;
     @media (min-width:550px){
         width: 40%;

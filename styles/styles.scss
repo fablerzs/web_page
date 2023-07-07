@@ -24,6 +24,7 @@ header {
     width: 100%;
     height: 80px;
     background-color: rgba($color: $background, $alpha: 0.8);
+    z-index: 10; // para evitar que cualquier elemento lo pise
     @media (min-width:770px){
         background-color: rgba($color: $background, $alpha: 0.8);
     }
@@ -59,7 +60,7 @@ header {
 main {
     .navigation {
         position: fixed;
-        right: 20px;
+        right: 15px;
         bottom: 60px;
         display: flex;
         flex-direction: column;
@@ -73,8 +74,8 @@ main {
             justify-content: flex-end;
         }
         .dot {
-            width: 15px;
-            height: 15px;
+            width: 10px;
+            height: 10px;
             background-color: black;
             transition: all 80ms ease-out;
             border: 3px solid black;
@@ -97,8 +98,8 @@ main {
             }
         }
         .dotF {
-            width: 30px;
-            height: 30px;
+            width: 13px;
+            height: 13px;
             background-color: black;
             transition: all 80ms ease-out;
             border: 3px solid black;
@@ -106,12 +107,14 @@ main {
             color: transparent;
             transform: rotate(45deg);
             font-weight: bolder;
-            position: relative;
-            right: -8px;
             border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover {
                 transform: rotate(0deg);
                 width: 60px;
+                height: 40px;
                 color: white;
             }
         }
@@ -125,33 +128,37 @@ main {
             @include container;
             background-color:$primary_color;
             height: 60%;
-            padding: 100px 0;
+            padding: 80px 0 30px 0;
             .description {
                 @include content(transparent);
                 h2 {
                     @include subtitle($background2);
+                    font-size: 55px;
+                    @media (min-width:770px){
+                        font-size: 90px;
+                    }
                 }
                 h3 {
                     @include paragraph($text_color2);
                 }
             }
-            .sub_p {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                gap: 20px;
-                padding: 20px;
-                p {
-                    color: $background2;
-                    font-weight: bolder;
-                    font-size: 15px;
-                    @media (min-width:768px){
-                        font-size: 20px;
-                    }
-                }
-            }
+            // .sub_p {
+            //     display: flex;
+            //     flex-direction: column;
+            //     flex-wrap: wrap;
+            //     align-items: center;
+            //     justify-content: center;
+            //     gap: 20px;
+            //     padding: 20px;
+            //     p {
+            //         color: $background2;
+            //         font-weight: bolder;
+            //         font-size: 15px;
+            //         @media (min-width:768px){
+            //             font-size: 20px;
+            //         }
+            //     }
+            // }
             @media (min-width:768px){
                 height: 100%;
                 width: 65%;
@@ -179,15 +186,15 @@ main {
     }
     #page-2 {
         @include container();
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        padding: 50px;
-        justify-items: center;
         background-color: $background;
+        gap: 30px;
         @media (min-width:770px){
+            display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            padding: 50px 100px;
             div:first-child {
                 grid-column: 1/2;
                 grid-row: 2/3;
@@ -245,7 +252,7 @@ main {
         div {
             @include content($background2);
             height: 38%;
-            gap: 2rem;
+            gap: 1rem;
             &:not(:last-of-type){
                 border-bottom: 1px solid $primary_color;
             }
@@ -280,10 +287,7 @@ main {
                 @include subtitle($text_color2);
             }
             p {
-                font-size: 30px;
-                color: $text_color2;
-                font-weight: bold;
-
+                @include paragraph($text_color2);
             }
             form {
                 width: 100%;
@@ -296,6 +300,7 @@ main {
                     grid-template-columns: 50% 50%;
                     grid-template-rows: 80px 160px 0px 80px;
                     gap: 30px;
+                    width: 60vw;
                 }
                 .name_form {
                     display: flex;
@@ -404,7 +409,8 @@ footer {
             color: $text_color;
             text-align: center;
             position: relative;
-            top: -2vh;
+            top: 2vh;
+            font-weight: 500;
         }  
         @media (min-width:770px){
             flex-direction: row;
