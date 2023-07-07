@@ -65,6 +65,10 @@ main .navigation {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  animation-name: show_nav;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 @media (min-width: 768px) {
   main .navigation {
@@ -94,10 +98,9 @@ main .navigation .dot {
   border-radius: 3px;
 }
 main .navigation .dot:hover {
-  width: 25px;
-  height: 40px;
-  transform: rotate(0deg);
   width: 60px;
+  height: 30px;
+  transform: rotate(0deg);
   color: white;
 }
 main .navigation .dotF {
@@ -106,19 +109,23 @@ main .navigation .dotF {
   background-color: black;
   transition: all 80ms ease-out;
   border: 3px solid black;
-  text-align: center;
-  color: transparent;
   transform: rotate(45deg);
-  font-weight: bolder;
-  border-radius: 3px;
+  color: transparent;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  position: relative;
+  right: -2px;
 }
 main .navigation .dotF:hover {
-  transform: rotate(0deg);
   width: 60px;
-  height: 40px;
+  height: 30px;
+  transform: rotate(0deg);
   color: white;
 }
 @media (min-width: 768px) {
@@ -814,5 +821,14 @@ footer .rights h5 {
   footer {
     flex-direction: column;
     gap: 40px;
+  }
+}
+
+@keyframes show_nav {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
   }
 }/*# sourceMappingURL=styles.css.map */
