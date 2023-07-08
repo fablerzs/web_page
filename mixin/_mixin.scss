@@ -1,3 +1,17 @@
+@mixin body() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text_color;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    overflow: y-scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 @mixin header() {
     position: fixed;
     display: flex; 
@@ -74,7 +88,7 @@
 @mixin navigation_dots() {
         position: fixed;
         right: 15px;
-        bottom: 60px;
+        bottom: 10px;
         display: flex;
         flex-direction: column;
         animation-name: show_nav;
@@ -82,8 +96,11 @@
         animation-direction: alternate;
         animation-iteration-count: 2;
         animation-delay: 1s;
+        display: none;
         @media (min-width:768px){
             right: 50px;
+            bottom: 60px;
+            display: flex;
         }
         a {
             display: flex;
@@ -111,6 +128,7 @@
     @media (min-width:770px){
         flex-direction: row;
     }
+    scroll-snap-align: start;
 }
 
 @mixin subtitle($color) {
@@ -146,15 +164,15 @@
     }
 }
 
-@mixin button_style() {
+@mixin button_style($color) {
     background-color:white;
     width: 200px;
     height: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 15px;
-    border: 2px solid $primary_color;
-    color: $primary_color;
+    border: 2px solid $color;
+    color: $color;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -162,7 +180,7 @@
     position: relative;
     
     i {
-        color: $primary_color;
+        color: $color;
     }
     &:hover {
         cursor: pointer;
@@ -174,7 +192,7 @@
         color: transparent;
         width: 0px;
         height: 50px;
-        background-color: $primary_color;
+        background-color: $color;
         position: absolute;
         left: 0px;
         transition: all 400ms;

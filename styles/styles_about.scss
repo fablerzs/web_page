@@ -3,15 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@100;300;400;500;900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: $text_color;
-    scroll-behavior: smooth;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
+    @include body();
 }
 
 header {
@@ -31,6 +23,7 @@ header {
 
 .personal_cards {
     @include container();
+    scroll-snap-align: none;
     height: 100%;
     padding: 150px 20px 100px 20px;
     gap: 30px;
@@ -52,5 +45,6 @@ header {
 
 footer {
     @include footer();
+    scroll-snap-align: none;
     height: 60vh;
 } 

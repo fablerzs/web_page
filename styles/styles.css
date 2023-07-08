@@ -6,9 +6,11 @@
   box-sizing: border-box;
   text-decoration: none;
   color: black;
-  scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
+  overflow: y-scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -19,12 +21,12 @@ header {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: rgba(203, 192, 203, 0.8);
+  background-color: rgba(141, 146, 126, 0.8);
   z-index: 10;
 }
 @media (min-width: 770px) {
   header {
-    background-color: rgba(203, 192, 203, 0.8);
+    background-color: rgba(141, 146, 126, 0.8);
   }
 }
 header h1 {
@@ -92,7 +94,7 @@ header .menu_hb i {
 main .navigation {
   position: fixed;
   right: 15px;
-  bottom: 60px;
+  bottom: 10px;
   display: flex;
   flex-direction: column;
   animation-name: show_nav;
@@ -100,10 +102,13 @@ main .navigation {
   animation-direction: alternate;
   animation-iteration-count: 2;
   animation-delay: 1s;
+  display: none;
 }
 @media (min-width: 768px) {
   main .navigation {
     right: 50px;
+    bottom: 60px;
+    display: flex;
   }
 }
 main .navigation a {
@@ -171,9 +176,10 @@ main #page-1 .block1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
-  background-color: #b57582;
+  scroll-snap-align: start;
+  background-color: #018D9C;
   height: 60%;
   padding: 80px 0 30px 0;
 }
@@ -200,7 +206,7 @@ main #page-1 .block1 .description {
 main #page-1 .block1 .description h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #55394c;
+  color: #2E4040;
   transition: all 0.4s;
   font-size: 55px;
 }
@@ -232,7 +238,8 @@ main #page-1 .block1 .description h3 {
   }
 }
 main #page-1 .block2 {
-  background-color: #71839e;
+  scroll-snap-align: start;
+  background-color: #2E4040;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,9 +266,10 @@ main #page-2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
-  background-color: #cbc0cb;
+  scroll-snap-align: start;
+  background-color: #8D927E;
   gap: 30px;
 }
 @media (min-width: 770px) {
@@ -312,7 +320,7 @@ main #page-2 div {
 main #page-2 div h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #55394c;
+  color: #2E4040;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
@@ -336,9 +344,10 @@ main #page-3 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
-  background-color: #b57582;
+  scroll-snap-align: start;
+  background-color: #018D9C;
 }
 @media (min-width: 770px) {
   main #page-3 {
@@ -399,10 +408,11 @@ main #page-4 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
+  scroll-snap-align: start;
   gap: 0px;
-  background-color: #cbc0cb;
+  background-color: #8D927E;
 }
 @media (min-width: 770px) {
   main #page-4 {
@@ -417,7 +427,7 @@ main #page-4 div {
   justify-content: center;
   gap: 10px;
   width: 85%;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 38%;
   gap: 1rem;
 }
@@ -427,7 +437,7 @@ main #page-4 div {
   }
 }
 main #page-4 div:not(:last-of-type) {
-  border-bottom: 1px solid #b57582;
+  border-bottom: 1px solid #018D9C;
 }
 main #page-4 div h2 {
   font-size: 35px;
@@ -459,8 +469,8 @@ main #page-4 div button {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
-  border: 2px solid #b57582;
-  color: #b57582;
+  border: 2px solid #2E4040;
+  color: #2E4040;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -468,7 +478,7 @@ main #page-4 div button {
   position: relative;
 }
 main #page-4 div button i {
-  color: #b57582;
+  color: #2E4040;
 }
 main #page-4 div button:hover {
   cursor: pointer;
@@ -480,7 +490,7 @@ main #page-4 div button::before {
   color: transparent;
   width: 0px;
   height: 50px;
-  background-color: #b57582;
+  background-color: #2E4040;
   position: absolute;
   left: 0px;
   transition: all 400ms;
@@ -501,7 +511,7 @@ main #page-4 div button:hover::before {
     padding: 0 80px;
   }
   main #page-4 div:not(:last-of-type) {
-    border-right: 1px solid #b57582;
+    border-right: 1px solid #018D9C;
   }
 }
 main #page-5 {
@@ -510,8 +520,9 @@ main #page-5 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
+  scroll-snap-align: start;
 }
 @media (min-width: 770px) {
   main #page-5 {
@@ -684,8 +695,8 @@ main #page-5 .contact form .send {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
-  border: 2px solid #b57582;
-  color: #b57582;
+  border: 2px solid #2E4040;
+  color: #2E4040;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -694,7 +705,7 @@ main #page-5 .contact form .send {
   z-index: 0;
 }
 main #page-5 .contact form .send i {
-  color: #b57582;
+  color: #2E4040;
 }
 main #page-5 .contact form .send:hover {
   cursor: pointer;
@@ -706,7 +717,7 @@ main #page-5 .contact form .send::before {
   color: transparent;
   width: 0px;
   height: 50px;
-  background-color: #b57582;
+  background-color: #2E4040;
   position: absolute;
   left: 0px;
   transition: all 400ms;
@@ -735,8 +746,8 @@ main #page-5 .contact form .reset {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
-  border: 2px solid #b57582;
-  color: #b57582;
+  border: 2px solid #2E4040;
+  color: #2E4040;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -745,7 +756,7 @@ main #page-5 .contact form .reset {
   z-index: 0;
 }
 main #page-5 .contact form .reset i {
-  color: #b57582;
+  color: #2E4040;
 }
 main #page-5 .contact form .reset:hover {
   cursor: pointer;
@@ -757,7 +768,7 @@ main #page-5 .contact form .reset::before {
   color: transparent;
   width: 0px;
   height: 50px;
-  background-color: #b57582;
+  background-color: #2E4040;
   position: absolute;
   left: 0px;
   transition: all 400ms;
@@ -784,9 +795,10 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #55394c;
+  background-color: #77775F;
   height: 100vh;
-  background-color: #71839e;
+  scroll-snap-align: start;
+  background-color: #2E4040;
 }
 @media (min-width: 770px) {
   footer {
@@ -803,7 +815,7 @@ footer .link_area {
   width: 85%;
   background-color: transparent;
   align-items: center;
-  border-bottom: 2px solid #55394c;
+  border-bottom: 2px solid #77775F;
   gap: 60px;
 }
 @media (min-width: 550px) {
