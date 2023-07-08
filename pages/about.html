@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/styles_about.css">
+    <script type="text/javascript" src="../js/functions.js"></script>
     <title>Samples</title>
 </head>
 <body>
@@ -21,10 +22,35 @@
                 <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
             </li>
         </ul>
-        <div class="menu_hb">
+        <div class="menu_hb" onclick="openMenu()">
             <i class='bx bx-menu-alt-right'></i>
         </div>
     </header>
+
+    <nav class="menu_expanded" id="menu_expanded">
+        <ul class="menu_element">
+            <li>
+                <a href="https://fablerzs.github.io/Resume/" target="_blank">Resumen (CV)</a>
+            </li>
+            <li>
+                <a href="https://github.com/fablerzs" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
+            </li>
+        </ul>
+        <div class="menu_element">
+            <a href="https://t.me/fablerzs" target="_blank">Telegram</a>
+            <a href="https://wa.me/528117512835" target="_blank">Whatsapp</a>
+        </div>
+        <div>
+            <ul class="menu_element">
+                <li><a href="pages/sample.html">Mi trabajo</a></li>
+                <li><a href="pages/about.html">Acerca de mí</a></li>
+            </ul>
+        </div>
+        <i onclick="closeMenu()" id="close_menu" class='bx bx-x-circle'></i>
+    </nav>
 
     <main>
         <ul class="navigation">

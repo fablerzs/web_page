@@ -18,6 +18,10 @@ header {
     @include header();
 }
 
+.menu_expanded {
+    @include menuhb();  
+}
+
 footer {
     @include footer();
     height: 450px;

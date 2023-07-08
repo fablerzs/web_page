@@ -22,12 +22,14 @@
                 <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
             </li>
         </ul>
-        <div onclick="toggle('menu_expanded')" class="menu_hb">
+        
+        <div onclick="openMenu()" class="menu_hb">
             <i class='bx bx-menu-alt-right'></i>
         </div>
     </header>
-    <nav>
-        <ul class="menu_expanded" id="menu_expanded">
+    
+    <nav class="menu_expanded" id="menu_expanded">
+        <ul class="menu_element">
             <li>
                 <a href="https://fablerzs.github.io/Resume/" target="_blank">Resumen (CV)</a>
             </li>
@@ -37,11 +39,20 @@
             <li>
                 <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
             </li>
-            <li>
-                <i id="close_menu" class='bx bx-x-circle'></i>
-            </li>
         </ul>
+        <div class="menu_element">
+            <a href="https://t.me/fablerzs" target="_blank">Telegram</a>
+            <a href="https://wa.me/528117512835" target="_blank">Whatsapp</a>
+        </div>
+        <div>
+            <ul class="menu_element">
+                <li><a href="pages/sample.html">Mi trabajo</a></li>
+                <li><a href="pages/about.html">Acerca de mí</a></li>
+            </ul>
+        </div>
+        <i onclick="closeMenu()" id="close_menu" class='bx bx-x-circle'></i>
     </nav>
+    
     <main>
         <ul class="navigation">
             <li><a href="#page-1"><div class="dot">yo</div></a></li>

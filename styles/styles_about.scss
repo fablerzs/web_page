@@ -18,6 +18,10 @@ header {
     @include header();
 }
 
+.menu_expanded {
+    @include menuhb();
+}
+
 .navigation {
     @include navigation_dots();
     .dotF {
