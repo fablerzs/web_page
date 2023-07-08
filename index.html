@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script type="text/javascript" src="js/functions.js"></script>
     <title>Mauricio Lopez</title>
 </head>
 <body>
@@ -21,10 +22,26 @@
                 <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
             </li>
         </ul>
-        <div class="menu_hb">
+        <div onclick="toggle('menu_expanded')" class="menu_hb">
             <i class='bx bx-menu-alt-right'></i>
         </div>
     </header>
+    <nav>
+        <ul class="menu_expanded" id="menu_expanded">
+            <li>
+                <a href="https://fablerzs.github.io/Resume/" target="_blank">Resumen (CV)</a>
+            </li>
+            <li>
+                <a href="https://github.com/fablerzs" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mauricio-l%C3%B3pez-153a4b182/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <i id="close_menu" class='bx bx-x-circle'></i>
+            </li>
+        </ul>
+    </nav>
     <main>
         <ul class="navigation">
             <li><a href="#page-1"><div class="dot">yo</div></a></li>
@@ -133,5 +150,7 @@
             <h5>&copy;FabianMauricioLopezRamos</h5><h5>Frontend Developer jr</h5>
         </div>
     </footer>
+
+    
 </body>
 </html>

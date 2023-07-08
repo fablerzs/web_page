@@ -48,6 +48,7 @@ header .menu a {
 }
 header .menu_hb {
   display: none;
+  transition: all 0.2s;
 }
 header .menu_hb i {
   font-size: 30px;
@@ -67,7 +68,7 @@ footer {
   background-color: #55394c;
   height: 100vh;
   background-color: #71839e;
-  height: 60vh;
+  height: 450px;
 }
 @media (min-width: 770px) {
   footer {
@@ -230,4 +231,63 @@ footer .rights h5 {
   height: 30px;
   transform: rotate(0deg);
   color: white;
+}
+
+.flexbox_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #55394c;
+  height: 100vh;
+  height: 100%;
+  padding: 150px 20px 100px 20px;
+  gap: 30px;
+  background-color: white;
+}
+@media (min-width: 770px) {
+  .flexbox_cards {
+    flex-direction: row;
+  }
+}
+@media (min-width: 770px) {
+  .flexbox_cards {
+    padding: 150px 200px 100px 200px;
+  }
+}
+.flexbox_cards .card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 85%;
+  background-color: #cbc0cb;
+  align-items: center;
+  padding: 0 0 5px 0;
+  border-radius: 4px;
+  transition: all 150ms;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+  flex: 30%;
+}
+@media (min-width: 550px) {
+  .flexbox_cards .card {
+    width: 40%;
+  }
+}
+.flexbox_cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.flexbox_cards .card a img {
+  width: 100%;
+}
+.flexbox_cards .card a h2 {
+  text-align: center;
+}
+.flexbox_cards .card a h3 {
+  text-align: center;
 }/*# sourceMappingURL=styles_samples.css.map */

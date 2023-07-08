@@ -18,7 +18,35 @@ header {
     @include header();
 }
 
+.navigation {
+    @include navigation_dots();
+    .dotF {
+        @include dot_nav(13px,13px);
+    }
+}
+
+.personal_cards {
+    @include container();
+    height: 100%;
+    padding: 150px 20px 100px 20px;
+    gap: 30px;
+    background-color: white;
+    @media (min-width:770px){
+        padding: 150px 200px 100px 200px;
+    }
+    .card{
+        @include cards();
+        justify-content: flex-start;
+        img {
+            width: 100%;
+        }
+        p {
+            padding: 10px;
+        }
+    }
+}
+
 footer {
     @include footer();
     height: 60vh;
-}
+} 

@@ -27,9 +27,11 @@
         a {
             font-weight: 600;
         }
+        
     }
     .menu_hb {
         display: none;
+        transition: all 0.2s;
         i {
             font-size: 30px;
         }
@@ -234,4 +236,19 @@
         transform: rotate(0deg);
         color: white;
         }
+}
+
+@mixin cards () {
+    @include content ($background);
+    align-items: center;
+    padding: 0 0 5px 0;
+    border-radius: 4px;
+    transition: all 150ms;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+    flex: 30%;
+    &:hover {
+        transform:translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 }
