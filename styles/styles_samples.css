@@ -72,12 +72,12 @@ header .menu_hb i {
   z-index: 23;
   padding: 30px;
   animation-name: show_menu;
-  animation-duration: 300ms;
+  animation-duration: 500ms;
   display: none;
 }
 .menu_expanded #close_menu {
   position: absolute;
-  top: 20px;
+  top: 23px;
   right: 30px;
   font-size: 30px;
 }
@@ -175,11 +175,11 @@ footer .rights h5 {
   bottom: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   animation-name: show_nav;
   animation-duration: 500ms;
   animation-direction: alternate;
   animation-iteration-count: 2;
+  animation-delay: 1s;
 }
 @media (min-width: 768px) {
   .navigation {
@@ -188,7 +188,7 @@ footer .rights h5 {
 }
 .navigation a {
   display: flex;
-  gap: 10px;
+  padding: 10px 0;
   justify-content: flex-end;
 }
 .navigation .dot {

@@ -12,6 +12,7 @@
     scroll-behavior: smooth;
     font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
+  
 }
 
 
@@ -294,11 +295,15 @@ footer {
 }
 
 @keyframes show_nav {
-    0% {transform: translateY(0px);}
-    100% {transform: translateY(-20px);}
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-16px);}
 }
 
 @keyframes show_menu {
     0% {opacity: 0;}
     100% {opacity:1;}
 }
+
+
+
+
