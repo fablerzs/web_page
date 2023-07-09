@@ -5,12 +5,17 @@
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 20px;
   overflow: y-scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+}
+@media (max-width: 550px) {
+  * {
+    scroll-snap-type: none;
+  }
 }
 
 header {
@@ -21,23 +26,25 @@ header {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: rgba(141, 146, 126, 0.8);
+  background-color: rgba(228, 222, 209, 0.8);
   z-index: 10;
 }
 @media (min-width: 770px) {
   header {
-    background-color: rgba(141, 146, 126, 0.8);
+    background-color: rgba(228, 222, 209, 0.8);
   }
 }
 header h1 {
   font-size: 30px;
+  color: black;
 }
 header h1 i {
   font-size: 1.3rem;
+  color: black;
 }
 header .menu {
   display: flex;
-  gap: 20px;
+  gap: 5vw;
   display: none;
 }
 @media (min-width: 769px) {
@@ -47,6 +54,7 @@ header .menu {
 }
 header .menu a {
   font-weight: 600;
+  color: black;
 }
 header .menu_hb {
   display: none;
@@ -54,6 +62,7 @@ header .menu_hb {
 }
 header .menu_hb i {
   font-size: 30px;
+  color: black;
 }
 @media (max-width: 768px) {
   header .menu_hb {
@@ -68,7 +77,7 @@ header .menu_hb i {
   gap: 100px;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: #01213f;
   position: fixed;
   right: 0;
   z-index: 23;
@@ -87,7 +96,7 @@ header .menu_hb i {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid white;
   padding-bottom: 30px;
 }
 
@@ -121,7 +130,6 @@ header .menu_hb i {
   height: 10px;
   background-color: black;
   transition: all 80ms ease-out;
-  border: 3px solid black;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -144,7 +152,6 @@ header .menu_hb i {
   height: 13px;
   background-color: black;
   transition: all 80ms ease-out;
-  border: 3px solid black;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -169,7 +176,6 @@ header .menu_hb i {
   height: 13px;
   background-color: black;
   transition: all 80ms ease-out;
-  border: 3px solid black;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -194,7 +200,7 @@ header .menu_hb i {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #77775F;
+  background-color: #74c7a7;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-align: none;
@@ -221,7 +227,7 @@ header .menu_hb i {
   justify-content: center;
   gap: 10px;
   width: 85%;
-  background-color: #8D927E;
+  background-color: #faf6ef;
   align-items: center;
   padding: 0 0 5px 0;
   border-radius: 4px;
@@ -231,7 +237,7 @@ header .menu_hb i {
   flex: 30%;
   justify-content: flex-start;
 }
-@media (min-width: 550px) {
+@media (min-width: 770px) {
   .personal_cards .card {
     width: 40%;
   }
@@ -253,10 +259,10 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #77775F;
+  background-color: #74c7a7;
   height: 100vh;
   scroll-snap-align: start;
-  background-color: #2E4040;
+  background-color: #01213f;
   scroll-snap-align: none;
   height: 60vh;
 }
@@ -275,10 +281,10 @@ footer .link_area {
   width: 85%;
   background-color: transparent;
   align-items: center;
-  border-bottom: 2px solid #77775F;
+  border-bottom: 2px solid #74c7a7;
   gap: 60px;
 }
-@media (min-width: 550px) {
+@media (min-width: 770px) {
   footer .link_area {
     width: 40%;
   }
@@ -286,7 +292,7 @@ footer .link_area {
 footer .link_area h2 {
   font-size: 35px;
   font-weight: bold;
-  color: black;
+  color: #e7baa3;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
@@ -311,7 +317,7 @@ footer .rights {
   gap: 20px;
 }
 footer .rights h5 {
-  color: black;
+  color: white;
   text-align: center;
   position: relative;
   top: 2vh;
