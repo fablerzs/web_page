@@ -13,7 +13,7 @@
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-@media (max-width: 550px) {
+@media (max-width: 770px) {
   * {
     scroll-snap-type: none;
   }
@@ -345,6 +345,7 @@ main #page-2 {
     justify-items: center;
     align-items: center;
     padding: 0 30px;
+    gap: 0px;
   }
   main #page-2 div:first-child {
     grid-column: 1/2;
