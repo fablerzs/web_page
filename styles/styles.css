@@ -100,6 +100,7 @@ header .menu_hb i {
 }
 
 main .navigation {
+  gap: 20px;
   position: fixed;
   right: 15px;
   bottom: 10px;
@@ -121,7 +122,6 @@ main .navigation {
 }
 main .navigation a {
   display: flex;
-  padding: 10px 0;
   justify-content: flex-end;
 }
 main .navigation .dot {
@@ -141,10 +141,11 @@ main .navigation .dot {
   border-radius: 3px;
 }
 main .navigation .dot:hover {
-  width: 60px;
+  width: 100%;
   height: 30px;
   transform: rotate(0deg);
   color: white;
+  padding: 10px;
 }
 main .navigation .dotF {
   width: 13px;
@@ -165,10 +166,11 @@ main .navigation .dotF {
   right: -2px;
 }
 main .navigation .dotF:hover {
-  width: 60px;
+  width: 100%;
   height: 30px;
   transform: rotate(0deg);
   color: white;
+  padding: 10px;
 }
 @media (min-width: 768px) {
   main #page-1 {

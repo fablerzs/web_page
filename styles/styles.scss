@@ -17,6 +17,7 @@ header {
 
 main {
     .navigation {
+        gap: 20px;
         @include navigation_dots();
     }
     #page-1 {
