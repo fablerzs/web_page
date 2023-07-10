@@ -1,0 +1,14 @@
+@keyframes show_nav {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-16px);}
+}
+
+@keyframes show_menu {
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
+
+@keyframes opening {
+    0% {font-size: 0px;}
+    100% {font-size: 100px;}
+}

@@ -1,6 +1,7 @@
 @import "../var/var";
 @import "../mixin/mixin";
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@100;300;400;500;900&display=swap');
+@import "../keyframes/keyframes.css";
 
 * {
     @include body();
@@ -24,7 +25,7 @@ main {
         
         @media (min-width:768px){
             display: flex;
-            height: 80vh;
+            height: 100vh;
         }
         .block1 {
             @include container;
@@ -36,6 +37,8 @@ main {
                 h2 {
                     @include subtitle($background2);
                     font-size: 55px;
+                    animation-name: show_menu;
+                    animation-duration: 1s;
                     @media (min-width:770px){
                         font-size: 65px;
                     }
@@ -45,6 +48,8 @@ main {
                 }
                 h3 {
                     @include paragraph($text_color2);
+                    animation-name: show_menu;
+                    animation-duration: 1s;
                 }
                 @media (min-width:770px){
                     width: 70%;
@@ -90,8 +95,13 @@ main {
                 transition: all 0.4s;
                 border-bottom: 2px solid $color1;
                 border-right: 2px solid $color1;
+                animation-name: show_menu;
+                    animation-duration: 1s;
                 @media (min-width:768px){
                     width: 65%;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
@@ -137,16 +147,17 @@ main {
         height: 100%;
         .aboutme {
             @include content(transparent);
-            padding-top: 100px;
             h2 {
                 @include subtitle($color1);
-                
             }
             p {
                 @include paragraph($text_color);
                 font-size: 15px;
+                a {
+                    color: $text_color;
+                    font-weight: 600;
+                }
             }
-            
         }
         .about_img {
             width: 85%;
@@ -175,6 +186,8 @@ main {
             @include content($background3);
             height: 38%;
             gap: 1rem;
+            animation-name: show_menu;
+            animation-duration: 1s;
             &:not(:last-of-type){
                 border-bottom: 2px solid $color1;
             }
@@ -313,15 +326,6 @@ footer {
     @include footer();
 }
 
-@keyframes show_nav {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(-16px);}
-}
-
-@keyframes show_menu {
-    0% {opacity: 0;}
-    100% {opacity:1;}
-}
 
 
 

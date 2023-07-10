@@ -1,4 +1,6 @@
+@import "../keyframes/keyframes.css";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@100;300;400;500;900&display=swap");
+@import "../keyframes/keyframes.css";
 * {
   padding: 0;
   margin: 0;
@@ -54,6 +56,21 @@ header .menu {
 header .menu a {
   font-weight: 600;
   color: black;
+  position: relative;
+}
+header .menu a::before {
+  width: 0%;
+  content: "";
+  background-color: #01213f;
+  height: 4px;
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+header .menu a:hover::before {
+  width: 100%;
 }
 header .menu_hb {
   display: none;
@@ -76,7 +93,7 @@ header .menu_hb i {
   gap: 100px;
   width: 100%;
   height: 100vh;
-  background-color: #01213f;
+  background-color: #e4ded1;
   position: fixed;
   right: 0;
   z-index: 23;
@@ -90,13 +107,17 @@ header .menu_hb i {
   top: 23px;
   right: 30px;
   font-size: 30px;
+  color: #01213f;
 }
 .menu_expanded .menu_element {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #01213f;
   padding-bottom: 30px;
+}
+.menu_expanded .menu_element a {
+  color: #01213f;
 }
 
 main .navigation {
@@ -175,7 +196,7 @@ main .navigation .dotF:hover {
 @media (min-width: 768px) {
   main #page-1 {
     display: flex;
-    height: 80vh;
+    height: 100vh;
   }
 }
 main #page-1 .block1 {
@@ -217,6 +238,8 @@ main #page-1 .block1 .description h2 {
   color: #74c7a7;
   transition: all 0.4s;
   font-size: 55px;
+  animation-name: show_menu;
+  animation-duration: 1s;
 }
 @media (min-width: 770px) {
   main #page-1 .block1 .description h2 {
@@ -241,6 +264,8 @@ main #page-1 .block1 .description h2 {
 main #page-1 .block1 .description h3 {
   color: white;
   font-size: 15px;
+  animation-name: show_menu;
+  animation-duration: 1s;
 }
 @media (min-width: 770px) {
   main #page-1 .block1 .description h3 {
@@ -284,10 +309,15 @@ main #page-1 .block2 img {
   transition: all 0.4s;
   border-bottom: 2px solid #01213f;
   border-right: 2px solid #01213f;
+  animation-name: show_menu;
+  animation-duration: 1s;
 }
 @media (min-width: 768px) {
   main #page-1 .block2 img {
     width: 65%;
+  }
+  main #page-1 .block2 img:hover {
+    transform: scale(1.05);
   }
 }
 main #page-2 {
@@ -403,7 +433,6 @@ main #page-3 .aboutme {
   gap: 10px;
   width: 85%;
   background-color: transparent;
-  padding-top: 100px;
 }
 @media (min-width: 770px) {
   main #page-3 .aboutme {
@@ -440,6 +469,10 @@ main #page-3 .aboutme p {
   main #page-3 .aboutme p {
     font-size: 22px;
   }
+}
+main #page-3 .aboutme p a {
+  color: black;
+  font-weight: 600;
 }
 main #page-3 .about_img {
   width: 85%;
@@ -488,6 +521,8 @@ main #page-4 div {
   background-color: #e4ded1;
   height: 38%;
   gap: 1rem;
+  animation-name: show_menu;
+  animation-duration: 1s;
 }
 @media (min-width: 770px) {
   main #page-4 div {
@@ -889,6 +924,10 @@ footer .link_area .message_me, footer .link_area .my_links ul {
 }
 footer .link_area .message_me a, footer .link_area .my_links ul a {
   color: white;
+  transition: all 0.3s;
+}
+footer .link_area .message_me a:hover, footer .link_area .my_links ul a:hover {
+  color: #74c7a7;
 }
 @media (min-width: 770px) {
   footer .link_area {
@@ -918,22 +957,5 @@ footer .rights h5 {
   footer {
     flex-direction: column;
     gap: 40px;
-  }
-}
-
-@keyframes show_nav {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-16px);
-  }
-}
-@keyframes show_menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }/*# sourceMappingURL=styles.css.map */

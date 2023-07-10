@@ -1,3 +1,5 @@
+@import "../keyframes/keyframes.css";
+
 @mixin body() {
     padding: 0;
     margin: 0;
@@ -45,6 +47,21 @@
         a {
             font-weight: 600;
             color: $text_color;
+            position: relative;
+            &::before {
+                width: 0%;
+                content: '';
+                background-color: $color1;
+                height: 4px;
+                position: absolute;
+                bottom: -2px;
+                left: 0px;
+                border-radius: 2px;
+                transition: all 0.2s;
+            }
+            &:hover::before {
+                width: 100%;
+            }
         }
         
     }
@@ -68,7 +85,7 @@
     gap: 100px;
     width: 100%;
     height: 100vh;
-    background-color: $color1;
+    background-color: $background3;
     position: fixed;
     right: 0;
     z-index: 23;
@@ -81,13 +98,17 @@
         top: 23px;
         right: 30px;
         font-size: 30px;
+        color: $color1;
     }
     .menu_element {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        border-bottom: 2px solid $text_color2;
+        border-bottom: 2px solid $color1;
         padding-bottom: 30px;
+        a {
+            color: $color1;
+        }
     }
 }
 
@@ -171,7 +192,6 @@
     @media (min-width:1025px){
         font-size: 65px;
     }
-    
 }
 
 @mixin paragraph ($pcolor) {
@@ -271,6 +291,10 @@
             gap: 20px;
             a {
                 color: white;
+                transition: all 0.3s;
+                &:hover {
+                    color: $background2;
+                }
             }
         }
         @media (min-width:770px){
@@ -304,13 +328,17 @@
 
 @mixin cards () {
     @include content ($background3);
-    align-items: center;
     padding: 0 0 5px 0;
     border-radius: 4px;
     transition: all 150ms;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     overflow: hidden;
     flex: 30%;
+    animation-name: show_menu;
+    animation-duration: 1s;
+    @media (min-width:770px) {
+        align-self: start;
+    }
     &:hover {
         transform:translateY(-5px);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

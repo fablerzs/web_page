@@ -1,3 +1,4 @@
+@import "../keyframes/keyframes.css";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Inter:wght@100;200;300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@100;300;400;500;900&display=swap");
 * {
   padding: 0;
@@ -54,6 +55,21 @@ header .menu {
 header .menu a {
   font-weight: 600;
   color: black;
+  position: relative;
+}
+header .menu a::before {
+  width: 0%;
+  content: "";
+  background-color: #01213f;
+  height: 4px;
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+header .menu a:hover::before {
+  width: 100%;
 }
 header .menu_hb {
   display: none;
@@ -76,7 +92,7 @@ header .menu_hb i {
   gap: 100px;
   width: 100%;
   height: 100vh;
-  background-color: #01213f;
+  background-color: #e4ded1;
   position: fixed;
   right: 0;
   z-index: 23;
@@ -90,13 +106,17 @@ header .menu_hb i {
   top: 23px;
   right: 30px;
   font-size: 30px;
+  color: #01213f;
 }
 .menu_expanded .menu_element {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #01213f;
   padding-bottom: 30px;
+}
+.menu_expanded .menu_element a {
+  color: #01213f;
 }
 
 footer {
@@ -157,6 +177,10 @@ footer .link_area .message_me, footer .link_area .my_links ul {
 }
 footer .link_area .message_me a, footer .link_area .my_links ul a {
   color: white;
+  transition: all 0.3s;
+}
+footer .link_area .message_me a:hover, footer .link_area .my_links ul a:hover {
+  color: #74c7a7;
 }
 @media (min-width: 770px) {
   footer .link_area {
@@ -319,17 +343,23 @@ footer .rights h5 {
   gap: 10px;
   width: 85%;
   background-color: #e4ded1;
-  align-items: center;
   padding: 0 0 5px 0;
   border-radius: 4px;
   transition: all 150ms;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow: hidden;
   flex: 30%;
+  animation-name: show_menu;
+  animation-duration: 1s;
 }
 @media (min-width: 770px) {
   .flexbox_cards .card {
     width: 40%;
+  }
+}
+@media (min-width: 770px) {
+  .flexbox_cards .card {
+    align-self: start;
   }
 }
 .flexbox_cards .card:hover {
@@ -341,7 +371,9 @@ footer .rights h5 {
 }
 .flexbox_cards .card a h2 {
   text-align: center;
+  color: black;
 }
 .flexbox_cards .card a h3 {
   text-align: center;
+  color: black;
 }/*# sourceMappingURL=styles_samples.css.map */
