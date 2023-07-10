@@ -4,7 +4,6 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
-    color: $text_color2;
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
     overflow: y-scroll;
@@ -144,17 +143,24 @@
     color: $color;
     transition: all 0.4s;
     @media (min-width:770px){
+        font-size: 50px;
+    }
+    @media (min-width:1025px){
         font-size: 65px;
     }
+    
 }
 
 @mixin paragraph ($pcolor) {
     color: $pcolor;
     font-size:15px;
-    transition: all 0.4s;
     @media (min-width:770px){
+        font-size: 18px;
+    }
+    @media (min-width:1025px){
         font-size: 22px;
     }
+    
 }
 
 @mixin content($color) { 
@@ -240,6 +246,9 @@
         .message_me, .my_links ul {
             display:flex;
             gap: 20px;
+            a {
+                color: white;
+            }
         }
         @media (min-width:770px){
             width: 90%;
@@ -273,7 +282,7 @@
     width: $width;
     height: $height;
     background-color: $text_color;
-    transition: all 80ms ease-out;
+    transition: all 200ms ease-out;
     transform: rotate(45deg);
     color: transparent;
     text-align: center;
@@ -293,7 +302,7 @@
 }
 
 @mixin cards () {
-    @include content ($background);
+    @include content ($background3);
     align-items: center;
     padding: 0 0 5px 0;
     border-radius: 4px;

@@ -5,12 +5,12 @@
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
-  color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   overflow: y-scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  color: black;
 }
 @media (max-width: 550px) {
   * {
@@ -129,7 +129,7 @@ header .menu_hb i {
   width: 10px;
   height: 10px;
   background-color: black;
-  transition: all 80ms ease-out;
+  transition: all 200ms ease-out;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -151,7 +151,7 @@ header .menu_hb i {
   width: 13px;
   height: 13px;
   background-color: black;
-  transition: all 80ms ease-out;
+  transition: all 200ms ease-out;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -175,7 +175,7 @@ header .menu_hb i {
   width: 13px;
   height: 13px;
   background-color: black;
-  transition: all 80ms ease-out;
+  transition: all 200ms ease-out;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -207,7 +207,7 @@ header .menu_hb i {
   height: 100%;
   padding: 150px 20px 100px 20px;
   gap: 30px;
-  background-color: white;
+  background-color: #faf6ef;
 }
 @media (min-width: 770px) {
   .personal_cards {
@@ -227,7 +227,7 @@ header .menu_hb i {
   justify-content: center;
   gap: 10px;
   width: 85%;
-  background-color: #faf6ef;
+  background-color: #e4ded1;
   align-items: center;
   padding: 0 0 5px 0;
   border-radius: 4px;
@@ -297,12 +297,20 @@ footer .link_area h2 {
 }
 @media (min-width: 770px) {
   footer .link_area h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  footer .link_area h2 {
     font-size: 65px;
   }
 }
 footer .link_area .message_me, footer .link_area .my_links ul {
   display: flex;
   gap: 20px;
+}
+footer .link_area .message_me a, footer .link_area .my_links ul a {
+  color: white;
 }
 @media (min-width: 770px) {
   footer .link_area {

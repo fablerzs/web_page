@@ -5,7 +5,6 @@
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
-  color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   overflow: y-scroll;
@@ -129,7 +128,7 @@ main .navigation .dot {
   width: 10px;
   height: 10px;
   background-color: black;
-  transition: all 80ms ease-out;
+  transition: all 200ms ease-out;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -151,7 +150,7 @@ main .navigation .dotF {
   width: 13px;
   height: 13px;
   background-color: black;
-  transition: all 80ms ease-out;
+  transition: all 200ms ease-out;
   transform: rotate(45deg);
   color: transparent;
   text-align: center;
@@ -219,10 +218,20 @@ main #page-1 .block1 .description h2 {
 }
 @media (min-width: 770px) {
   main #page-1 .block1 .description h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  main #page-1 .block1 .description h2 {
     font-size: 65px;
   }
 }
 @media (min-width: 770px) {
+  main #page-1 .block1 .description h2 {
+    font-size: 65px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-1 .block1 .description h2 {
     font-size: 90px;
   }
@@ -230,9 +239,13 @@ main #page-1 .block1 .description h2 {
 main #page-1 .block1 .description h3 {
   color: white;
   font-size: 15px;
-  transition: all 0.4s;
 }
 @media (min-width: 770px) {
+  main #page-1 .block1 .description h3 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-1 .block1 .description h3 {
     font-size: 22px;
   }
@@ -267,8 +280,8 @@ main #page-1 .block2 img {
   padding: 10px;
   margin: 60px;
   transition: all 0.4s;
-  border-bottom: 1px solid #01213f;
-  border-right: 1px solid #01213f;
+  border-bottom: 2px solid #01213f;
+  border-right: 2px solid #01213f;
 }
 @media (min-width: 768px) {
   main #page-1 .block2 img {
@@ -340,15 +353,24 @@ main #page-2 div h2 {
 }
 @media (min-width: 770px) {
   main #page-2 div h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  main #page-2 div h2 {
     font-size: 65px;
   }
 }
 main #page-2 div p {
   color: #01213f;
   font-size: 15px;
-  transition: all 0.4s;
 }
 @media (min-width: 770px) {
+  main #page-2 div p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-2 div p {
     font-size: 22px;
   }
@@ -363,13 +385,14 @@ main #page-3 {
   height: 100vh;
   scroll-snap-align: start;
   background-color: #74c7a7;
+  height: 100%;
 }
 @media (min-width: 770px) {
   main #page-3 {
     flex-direction: row;
   }
 }
-main #page-3 div {
+main #page-3 .aboutme {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -378,43 +401,61 @@ main #page-3 div {
   gap: 10px;
   width: 85%;
   background-color: transparent;
+  padding-top: 100px;
 }
 @media (min-width: 770px) {
-  main #page-3 div {
+  main #page-3 .aboutme {
     width: 40%;
   }
 }
-main #page-3 div h2 {
+main #page-3 .aboutme h2 {
   font-size: 35px;
   font-weight: bold;
   color: #01213f;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
-  main #page-3 div h2 {
+  main #page-3 .aboutme h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  main #page-3 .aboutme h2 {
     font-size: 65px;
   }
 }
-main #page-3 div p {
+main #page-3 .aboutme p {
   color: black;
   font-size: 15px;
-  transition: all 0.4s;
   font-size: 15px;
 }
 @media (min-width: 770px) {
-  main #page-3 div p {
+  main #page-3 .aboutme p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
+  main #page-3 .aboutme p {
     font-size: 22px;
   }
 }
-main #page-3 img {
-  width: 70%;
+main #page-3 .about_img {
+  width: 85%;
   margin-bottom: 40px;
   border-radius: 2px;
 }
-@media (min-width: 550px) {
-  main #page-3 img {
-    width: 600px;
-    margin: 0;
+main #page-3 .about_img img {
+  width: 100%;
+}
+@media (min-width: 776px) {
+  main #page-3 .about_img {
+    width: 40%;
+    max-width: 700px;
+  }
+}
+@media (min-width: 770px) {
+  main #page-3 {
+    height: 100vh;
   }
 }
 main #page-4 {
@@ -463,15 +504,24 @@ main #page-4 div h2 {
 }
 @media (min-width: 770px) {
   main #page-4 div h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  main #page-4 div h2 {
     font-size: 65px;
   }
 }
 main #page-4 div p {
   color: black;
   font-size: 15px;
-  transition: all 0.4s;
 }
 @media (min-width: 770px) {
+  main #page-4 div p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-4 div p {
     font-size: 22px;
   }
@@ -556,6 +606,7 @@ main #page-5 .contact {
   background-color: transparent;
   align-items: center;
   justify-content: center;
+  gap: 45px;
 }
 @media (min-width: 770px) {
   main #page-5 .contact {
@@ -565,20 +616,31 @@ main #page-5 .contact {
 main #page-5 .contact h2 {
   font-size: 35px;
   font-weight: bold;
-  color: white;
+  color: #01213f;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
+  main #page-5 .contact h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-5 .contact h2 {
     font-size: 65px;
   }
 }
 main #page-5 .contact p {
-  color: white;
+  color: #01213f;
   font-size: 15px;
-  transition: all 0.4s;
+  font-weight: 600;
+  font-size: 20px;
 }
 @media (min-width: 770px) {
+  main #page-5 .contact p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-5 .contact p {
     font-size: 22px;
   }
@@ -607,11 +669,16 @@ main #page-5 .contact form .name_form {
   width: 100%;
 }
 main #page-5 .contact form .name_form label {
-  color: white;
+  color: #01213f;
   font-size: 15px;
-  transition: all 0.4s;
+  font-weight: 600;
 }
 @media (min-width: 770px) {
+  main #page-5 .contact form .name_form label {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-5 .contact form .name_form label {
     font-size: 22px;
   }
@@ -641,11 +708,16 @@ main #page-5 .contact form .email_form {
   width: 100%;
 }
 main #page-5 .contact form .email_form label {
-  color: white;
+  color: #01213f;
   font-size: 15px;
-  transition: all 0.4s;
+  font-weight: 600;
 }
 @media (min-width: 770px) {
+  main #page-5 .contact form .email_form label {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-5 .contact form .email_form label {
     font-size: 22px;
   }
@@ -676,11 +748,16 @@ main #page-5 .contact form .textarea_form {
   margin-bottom: 30px;
 }
 main #page-5 .contact form .textarea_form label {
-  color: white;
+  color: #01213f;
   font-size: 15px;
-  transition: all 0.4s;
+  font-weight: 600;
 }
 @media (min-width: 770px) {
+  main #page-5 .contact form .textarea_form label {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1025px) {
   main #page-5 .contact form .textarea_form label {
     font-size: 22px;
   }
@@ -847,12 +924,20 @@ footer .link_area h2 {
 }
 @media (min-width: 770px) {
   footer .link_area h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  footer .link_area h2 {
     font-size: 65px;
   }
 }
 footer .link_area .message_me, footer .link_area .my_links ul {
   display: flex;
   gap: 20px;
+}
+footer .link_area .message_me a, footer .link_area .my_links ul a {
+  color: white;
 }
 @media (min-width: 770px) {
   footer .link_area {

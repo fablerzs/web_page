@@ -36,6 +36,9 @@ main {
                     @include subtitle($background2);
                     font-size: 55px;
                     @media (min-width:770px){
+                        font-size: 65px;
+                    }
+                    @media (min-width:1025px){
                         font-size: 90px;
                     }
                 }
@@ -84,8 +87,8 @@ main {
                 padding: 10px;
                 margin: 60px;
                 transition: all 0.4s;
-                border-bottom: 1px solid $color1;
-                border-right: 1px solid $color1;
+                border-bottom: 2px solid $color1;
+                border-right: 2px solid $color1;
                 @media (min-width:768px){
                     width: 65%;
                 }
@@ -130,8 +133,10 @@ main {
     #page-3 {
         @include container;
         background-color: $background2;
-        div {
+        height: 100%;
+        .aboutme {
             @include content(transparent);
+            padding-top: 100px;
             h2 {
                 @include subtitle($color1);
                 
@@ -142,14 +147,22 @@ main {
             }
             
         }
-        img {
-            width: 70%;
+        .about_img {
+            width: 85%;
             margin-bottom: 40px;
             border-radius: 2px;
-            @media (min-width:550px){
-                width: 600px;
-                margin: 0;
+            img {
+                width: 100%;
             }
+            @media (min-width:776px){
+                width: 40%;
+                max-width: 700px;
+                
+            }
+        }
+        @media (min-width:770px){
+            height: 100vh;
+            
         }
 
     }
@@ -192,11 +205,14 @@ main {
             @include content(transparent);
             align-items: center;
             justify-content: center;
+            gap: 45px;
             h2 {
-                @include subtitle($text_color2);
+                @include subtitle($color1);
             }
             p {
-                @include paragraph($text_color2);
+                @include paragraph($color1);
+                font-weight: 600;
+                font-size: 20px;
             }
             form {
                 width: 100%;
@@ -218,7 +234,8 @@ main {
                     grid-row: 1/2;
                     width: 100%;
                     label {
-                        @include paragraph($text_color2)
+                        @include paragraph($color1);
+                        font-weight: 600;
                     }
                     input {
                         @include form_style();
@@ -236,7 +253,8 @@ main {
                     grid-row: 2/3; 
                     width: 100%;
                     label {
-                        @include paragraph($text_color2);
+                        @include paragraph($color1);
+                        font-weight: 600;
                     }
                     input {
                         @include form_style();
@@ -254,7 +272,8 @@ main {
                     width: 100%;
                     margin-bottom: 30px;
                     label {
-                        @include paragraph($text_color2);
+                        @include paragraph($color1);
+                        font-weight: 600;
                     }
                     textarea {
                         @include form_style();
