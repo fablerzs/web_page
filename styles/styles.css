@@ -27,16 +27,16 @@ header {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: rgba(228, 222, 209, 0.8);
+  background-color: rgba(181, 209, 172, 0.7);
   z-index: 10;
 }
 @media (min-width: 770px) {
   header {
-    background-color: rgba(228, 222, 209, 0.8);
+    background-color: rgba(181, 209, 172, 0.7);
   }
 }
 header h1 {
-  font-size: 30px;
+  font-size: 40px;
   color: black;
 }
 header h1 i {
@@ -61,7 +61,7 @@ header .menu a {
 header .menu a::before {
   width: 0%;
   content: "";
-  background-color: #01213f;
+  background-color: #291733;
   height: 4px;
   position: absolute;
   bottom: -2px;
@@ -93,7 +93,7 @@ header .menu_hb i {
   gap: 100px;
   width: 100%;
   height: 100vh;
-  background-color: #e4ded1;
+  background-color: #192F3C;
   position: fixed;
   right: 0;
   z-index: 23;
@@ -107,17 +107,17 @@ header .menu_hb i {
   top: 23px;
   right: 30px;
   font-size: 30px;
-  color: #01213f;
+  color: #EAF205;
 }
 .menu_expanded .menu_element {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: 2px solid #01213f;
+  border-bottom: 2px solid #EAF205;
   padding-bottom: 30px;
 }
 .menu_expanded .menu_element a {
-  color: #01213f;
+  color: white;
 }
 
 main .navigation {
@@ -150,7 +150,6 @@ main .navigation .dot {
   height: 10px;
   background-color: black;
   transition: all 200ms ease-out;
-  transform: rotate(45deg);
   color: transparent;
   text-align: center;
   display: flex;
@@ -160,6 +159,7 @@ main .navigation .dot {
   font-size: 12px;
   font-weight: bold;
   border-radius: 3px;
+  border: 2px solid #788a68;
 }
 main .navigation .dot:hover {
   width: 100%;
@@ -173,7 +173,6 @@ main .navigation .dotF {
   height: 13px;
   background-color: black;
   transition: all 200ms ease-out;
-  transform: rotate(45deg);
   color: transparent;
   text-align: center;
   display: flex;
@@ -183,6 +182,7 @@ main .navigation .dotF {
   font-size: 12px;
   font-weight: bold;
   border-radius: 3px;
+  border: 2px solid #788a68;
   position: relative;
   right: -2px;
 }
@@ -205,10 +205,10 @@ main #page-1 .block1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
-  background-color: #01213f;
+  background-color: #291733;
   height: 60%;
   padding: 80px 0 30px 0;
 }
@@ -218,7 +218,7 @@ main #page-1 .block1 {
   }
 }
 main #page-1 .block1 .description {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -235,7 +235,7 @@ main #page-1 .block1 .description {
 main #page-1 .block1 .description h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #74c7a7;
+  color: #EAF205;
   transition: all 0.4s;
   font-size: 55px;
   animation-name: show_menu;
@@ -263,7 +263,8 @@ main #page-1 .block1 .description h2 {
 }
 main #page-1 .block1 .description h3 {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
+  font-size: 25px;
   animation-name: show_menu;
   animation-duration: 1s;
 }
@@ -275,6 +276,11 @@ main #page-1 .block1 .description h3 {
 @media (min-width: 1025px) {
   main #page-1 .block1 .description h3 {
     font-size: 22px;
+  }
+}
+@media (min-width: 770px) {
+  main #page-1 .block1 .description h3 {
+    font-size: 32px;
   }
 }
 @media (min-width: 770px) {
@@ -291,7 +297,7 @@ main #page-1 .block1 .description h3 {
 }
 main #page-1 .block2 {
   scroll-snap-align: start;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,8 +313,8 @@ main #page-1 .block2 img {
   padding: 10px;
   margin: 60px;
   transition: all 0.4s;
-  border-bottom: 2px solid #01213f;
-  border-right: 2px solid #01213f;
+  border-bottom: 2px solid #291733;
+  border-right: 2px solid #291733;
   animation-name: show_menu;
   animation-duration: 1s;
 }
@@ -326,11 +332,11 @@ main #page-2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
-  background-color: #faf6ef;
-  gap: 30px;
+  background-color: #B5D1AC;
+  gap: 50px;
 }
 @media (min-width: 770px) {
   main #page-2 {
@@ -345,7 +351,7 @@ main #page-2 {
     justify-items: center;
     align-items: center;
     padding: 0 30px;
-    gap: 0px;
+    gap: 30px;
   }
   main #page-2 div:first-child {
     grid-column: 1/2;
@@ -359,7 +365,7 @@ main #page-2 {
   }
 }
 main #page-2 div {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -381,7 +387,7 @@ main #page-2 div {
 main #page-2 div h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #01213f;
+  color: #291733;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
@@ -395,8 +401,9 @@ main #page-2 div h2 {
   }
 }
 main #page-2 div p {
-  color: #01213f;
-  font-size: 15px;
+  color: #291733;
+  font-size: 18px;
+  text-align: justify;
 }
 @media (min-width: 770px) {
   main #page-2 div p {
@@ -414,11 +421,13 @@ main #page-3 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
-  background-color: #74c7a7;
+  background-color: #291733;
   height: 100%;
+  gap: 20px;
+  padding: 25px 0;
 }
 @media (min-width: 770px) {
   main #page-3 {
@@ -426,7 +435,7 @@ main #page-3 {
   }
 }
 main #page-3 .aboutme {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -443,7 +452,7 @@ main #page-3 .aboutme {
 main #page-3 .aboutme h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #01213f;
+  color: #EAF205;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
@@ -457,9 +466,9 @@ main #page-3 .aboutme h2 {
   }
 }
 main #page-3 .aboutme p {
-  color: black;
-  font-size: 15px;
-  font-size: 15px;
+  color: white;
+  font-size: 18px;
+  text-align: justify;
 }
 @media (min-width: 770px) {
   main #page-3 .aboutme p {
@@ -472,7 +481,7 @@ main #page-3 .aboutme p {
   }
 }
 main #page-3 .aboutme p a {
-  color: black;
+  color: #EAF205;
   font-weight: 600;
 }
 main #page-3 .about_img {
@@ -500,11 +509,11 @@ main #page-4 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
   gap: 0px;
-  background-color: #faf6ef;
+  background-color: #F9F9F9;
 }
 @media (min-width: 770px) {
   main #page-4 {
@@ -512,18 +521,19 @@ main #page-4 {
   }
 }
 main #page-4 div {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
   width: 85%;
-  background-color: #e4ded1;
+  background-color: #B5D1AC;
   height: 38%;
   gap: 1rem;
   animation-name: show_menu;
   animation-duration: 1s;
+  align-items: center;
 }
 @media (min-width: 770px) {
   main #page-4 div {
@@ -531,12 +541,12 @@ main #page-4 div {
   }
 }
 main #page-4 div:not(:last-of-type) {
-  border-bottom: 2px solid #01213f;
+  border-bottom: 2px solid #291733;
 }
 main #page-4 div h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #01213f;
+  color: #291733;
   transition: all 0.4s;
   text-align: left;
 }
@@ -552,7 +562,7 @@ main #page-4 div h2 {
 }
 main #page-4 div p {
   color: black;
-  font-size: 15px;
+  font-size: 18px;
 }
 @media (min-width: 770px) {
   main #page-4 div p {
@@ -571,9 +581,9 @@ main #page-4 div button {
   height: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 15px;
-  border: 2px solid #e7baa3;
-  color: #e7baa3;
+  font-size: 18px;
+  border: 2px solid #291733;
+  color: #291733;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -581,7 +591,7 @@ main #page-4 div button {
   position: relative;
 }
 main #page-4 div button i {
-  color: #e7baa3;
+  color: #291733;
 }
 main #page-4 div button:hover {
   cursor: pointer;
@@ -593,10 +603,10 @@ main #page-4 div button::before {
   color: transparent;
   width: 0px;
   height: 50px;
-  background-color: #e7baa3;
+  background-color: #291733;
   position: absolute;
   left: 0px;
-  transition: all 400ms;
+  transition: all 250ms;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -612,9 +622,10 @@ main #page-4 div button:hover::before {
     height: 70%;
     gap: 3rem;
     padding: 0 80px;
+    align-items: flex-start;
   }
   main #page-4 div:not(:last-of-type) {
-    border-right: 2px solid #01213f;
+    border-right: 2px solid #291733;
     border-bottom: none;
   }
 }
@@ -624,9 +635,10 @@ main #page-5 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
+  background-color: #291733;
 }
 @media (min-width: 770px) {
   main #page-5 {
@@ -634,7 +646,7 @@ main #page-5 {
   }
 }
 main #page-5 .contact {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -654,8 +666,9 @@ main #page-5 .contact {
 main #page-5 .contact h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #01213f;
+  color: #EAF205;
   transition: all 0.4s;
+  text-align: center;
 }
 @media (min-width: 770px) {
   main #page-5 .contact h2 {
@@ -668,10 +681,11 @@ main #page-5 .contact h2 {
   }
 }
 main #page-5 .contact p {
-  color: #01213f;
-  font-size: 15px;
+  color: #EAF205;
+  font-size: 18px;
   font-weight: 600;
   font-size: 20px;
+  text-align: center;
 }
 @media (min-width: 770px) {
   main #page-5 .contact p {
@@ -707,8 +721,8 @@ main #page-5 .contact form .name_form {
   width: 100%;
 }
 main #page-5 .contact form .name_form label {
-  color: #01213f;
-  font-size: 15px;
+  color: #EAF205;
+  font-size: 18px;
   font-weight: 600;
 }
 @media (min-width: 770px) {
@@ -746,8 +760,8 @@ main #page-5 .contact form .email_form {
   width: 100%;
 }
 main #page-5 .contact form .email_form label {
-  color: #01213f;
-  font-size: 15px;
+  color: #EAF205;
+  font-size: 18px;
   font-weight: 600;
 }
 @media (min-width: 770px) {
@@ -786,8 +800,8 @@ main #page-5 .contact form .textarea_form {
   margin-bottom: 30px;
 }
 main #page-5 .contact form .textarea_form label {
-  color: #01213f;
-  font-size: 15px;
+  color: #EAF205;
+  font-size: 18px;
   font-weight: 600;
 }
 @media (min-width: 770px) {
@@ -825,18 +839,19 @@ main #page-5 .contact form .send {
   height: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 15px;
-  border: 2px solid #01213f;
-  color: #01213f;
+  font-size: 18px;
+  border: 2px solid #EAF205;
+  color: #EAF205;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  color: #291733;
   z-index: 0;
 }
 main #page-5 .contact form .send i {
-  color: #01213f;
+  color: #EAF205;
 }
 main #page-5 .contact form .send:hover {
   cursor: pointer;
@@ -848,10 +863,10 @@ main #page-5 .contact form .send::before {
   color: transparent;
   width: 0px;
   height: 50px;
-  background-color: #01213f;
+  background-color: #EAF205;
   position: absolute;
   left: 0px;
-  transition: all 400ms;
+  transition: all 250ms;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -861,6 +876,9 @@ main #page-5 .contact form .send::before {
 main #page-5 .contact form .send:hover::before {
   width: 198px;
   color: white;
+}
+main #page-5 .contact form .send:hover {
+  color: #291733;
 }
 @media (min-width: 770px) {
   main #page-5 .contact form .send {
@@ -875,10 +893,10 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #74c7a7;
+  background-color: #EAF205;
   height: 100vh;
   scroll-snap-align: start;
-  background-color: #01213f;
+  background-color: #192F3C;
 }
 @media (min-width: 770px) {
   footer {
@@ -886,7 +904,7 @@ footer {
   }
 }
 footer .link_area {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -895,7 +913,7 @@ footer .link_area {
   width: 85%;
   background-color: transparent;
   align-items: center;
-  border-bottom: 2px solid #74c7a7;
+  border-bottom: 2px solid #EAF205;
   gap: 60px;
 }
 @media (min-width: 770px) {
@@ -906,7 +924,7 @@ footer .link_area {
 footer .link_area h2 {
   font-size: 35px;
   font-weight: bold;
-  color: #e7baa3;
+  color: #EAF205;
   transition: all 0.4s;
 }
 @media (min-width: 770px) {
@@ -928,7 +946,7 @@ footer .link_area .message_me a, footer .link_area .my_links ul a {
   transition: all 0.3s;
 }
 footer .link_area .message_me a:hover, footer .link_area .my_links ul a:hover {
-  color: #74c7a7;
+  color: #EAF205;
 }
 @media (min-width: 770px) {
   footer .link_area {
