@@ -149,7 +149,7 @@ main .navigation .dot {
   width: 10px;
   height: 10px;
   background-color: black;
-  transition: all 200ms ease-out;
+  transition: all 100ms ease-out;
   color: transparent;
   text-align: center;
   display: flex;
@@ -172,7 +172,7 @@ main .navigation .dotF {
   width: 13px;
   height: 13px;
   background-color: black;
-  transition: all 200ms ease-out;
+  transition: all 100ms ease-out;
   color: transparent;
   text-align: center;
   display: flex;
