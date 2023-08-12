@@ -132,6 +132,7 @@ main {
                 grid-row: 1/2;
                 align-self: self-end;
             }
+            
         }
         div {
             @include content(transparent);
@@ -146,6 +147,7 @@ main {
                 text-align: justify;
               }
         }
+        
     }
     #page-3 {
         @include container;
